@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import StickyBooking from './components/StickyBooking';
+import DemoWatermark from './components/DemoWatermark';
 import Home from './views/Home';
 import Services from './views/Services';
 import Team from './views/Team';
@@ -25,7 +26,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-sand text-charcoal font-sans">
+    <div className="flex flex-col min-h-screen bg-sand text-charcoal font-sans relative">
+      <DemoWatermark />
       <Navigation currentView={currentView} onNavigate={setCurrentView} />
       
       <main className="flex-grow">
