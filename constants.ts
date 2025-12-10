@@ -1,7 +1,11 @@
 
+
 import { ServiceCategory, Stylist, GalleryItem, FaqItem } from './types';
 
 export const BOOKING_URL = "https://bubbalicioushairandco.square.site/s/appointments";
+
+// The specific "Long Blonde" image requested
+const BLONDE_HERO_IMG = "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1920&auto=format&fit=crop";
 
 export const CONTACT_INFO = {
   address: "Shop 14, 743-757 Deception Bay Rd",
@@ -26,7 +30,7 @@ export const CONTACT_INFO = {
 
 export const HERO_IMAGES = [
   {
-    src: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1920&auto=format&fit=crop",
+    src: BLONDE_HERO_IMG, // Applied specifically here
     alt: "Blonde Specialist Working",
     heading: "Effortless Colour.",
     subheading: "Rothwell's premier destination for lived-in blonde."
@@ -169,7 +173,7 @@ export const TEAM_DATA: Stylist[] = [
     role: "Salon Director",
     specialty: "Blonde & Extension Specialist",
     bio: "The heart of Bubbalicious. Brittany specializes in major transformations and creating that perfect creamy blonde.",
-    image: "https://images.unsplash.com/photo-1595476103518-3c8ad029e4a8?q=80&w=800&auto=format&fit=crop"
+    image: BLONDE_HERO_IMG // Applied specifically here
   },
   {
     id: 'st2',
@@ -211,14 +215,14 @@ export const REVIEWS_DATA = [
 ];
 
 export const GALLERY_DATA: GalleryItem[] = [
-  { id: 'g1', src: 'https://images.unsplash.com/photo-1595476103518-3c8ad029e4a8?q=80&w=800&auto=format&fit=crop', category: 'Blonde', caption: 'Creamy Blonde' },
-  { id: 'g2', src: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop', category: 'Balayage', caption: 'Root Melt' },
+  { id: 'g1', src: BLONDE_HERO_IMG, category: 'Blonde', caption: 'Creamy Blonde' }, // Applied specifically here
+  { id: 'g2', src: 'https://images.unsplash.com/photo-1595476103518-3c8ad029e4a8?q=80&w=800&auto=format&fit=crop', category: 'Balayage', caption: 'Root Melt' },
   { id: 'g3', src: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop', category: 'Extensions', caption: '22 Inch Weft' },
   { id: 'g4', src: 'https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=800&auto=format&fit=crop', category: 'Corrective', caption: 'Colour Correction' },
-  { id: 'g5', src: 'https://images.unsplash.com/photo-1492106087820-71f171780e99?q=80&w=800&auto=format&fit=crop', category: 'Blonde', caption: 'Face Frame' },
+  { id: 'g5', src: BLONDE_HERO_IMG, category: 'Blonde', caption: 'Face Frame' }, // Applied specifically here
   { id: 'g6', src: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop', category: 'Extensions', caption: 'Volume Booster' },
   { id: 'g7', src: 'https://images.unsplash.com/photo-1596455607563-ad6193f76b17?q=80&w=800&auto=format&fit=crop', category: 'Balayage', caption: 'Caramel Tones' },
-  { id: 'g8', src: 'https://images.unsplash.com/photo-1522337360705-8b13d5204369?q=80&w=800&auto=format&fit=crop', category: 'Corrective', caption: 'Banding Fix' },
+  { id: 'g8', src: 'https://images.unsplash.com/photo-1582095133179-bfd08d2fc6a8?q=80&w=800&auto=format&fit=crop', category: 'Corrective', caption: 'Banding Fix' },
 ];
 
 export const FAQ_DATA: FaqItem[] = [

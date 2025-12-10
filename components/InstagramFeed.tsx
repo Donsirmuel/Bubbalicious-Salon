@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Instagram, ArrowRight, Heart } from 'lucide-react';
 import Reveal from './Reveal';
@@ -6,9 +7,9 @@ import { CONTACT_INFO } from '../constants';
 const InstagramFeed: React.FC = () => {
     // Curated list of high-reliability images for the feed
     const feedImages = [
-        "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop", // Blonde long hair
-        "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop", // Hairdresser working
-        "https://images.unsplash.com/photo-1595476103518-3c8ad029e4a8?q=80&w=600&auto=format&fit=crop", // Blonde back view
+        "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop", // The requested Blonde Image
+        "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=600&auto=format&fit=crop", // Vivid Pink
+        "https://images.unsplash.com/photo-1595476103518-3c8ad029e4a8?q=80&w=600&auto=format&fit=crop", // Redhead/Face Frame
         "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop", // Salon interior
         "https://images.unsplash.com/photo-1582095133179-bfd08d2fc6a8?q=80&w=600&auto=format&fit=crop", // Tools
         "https://images.unsplash.com/photo-1492106087820-71f171780e99?q=80&w=600&auto=format&fit=crop", // Brunette/Balayage

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { GALLERY_DATA } from '../constants';
 import { Instagram, ArrowRight } from 'lucide-react';
@@ -11,8 +12,17 @@ const Gallery: React.FC = () => {
     ? GALLERY_DATA 
     : GALLERY_DATA.filter(img => img.category === filter);
 
-  // Simulated Instagram Posts
-  const instaPosts = [1, 2, 3, 4, 5, 6, 7, 8];
+  // Curated list of distinct images for the bottom "Instagram Strip" to avoid repetition and broken links
+  const galleryStripImages = [
+    "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=400&auto=format&fit=crop", // Extensions/Wefts
+    "https://images.unsplash.com/photo-1521590832896-40226c61ebac?q=80&w=400&auto=format&fit=crop", // Salon Texture
+    "https://images.unsplash.com/photo-1582095133179-bfd08d2fc6a8?q=80&w=400&auto=format&fit=crop", // Tools/Scissors
+    "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=400&auto=format&fit=crop", // Product/Shelf
+    "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=400&auto=format&fit=crop", // Vivid/Pink
+    "https://images.unsplash.com/photo-1556228720-1987594b8d73?q=80&w=400&auto=format&fit=crop", // Styling tools
+    "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=400&auto=format&fit=crop", // Salon Chair
+    "https://images.unsplash.com/photo-1503951914875-452162b7f304?q=80&w=400&auto=format&fit=crop", // Comb/Scissor artistic
+  ];
 
   return (
     <div className="min-h-screen bg-sand pt-10 pb-0">
@@ -87,16 +97,13 @@ const Gallery: React.FC = () => {
             
             {/* Horizontal Scroll Container */}
             <div className="flex overflow-x-auto space-x-4 pb-8 -mx-6 px-6 scrollbar-hide snap-x">
-                {instaPosts.map((i) => (
+                {galleryStripImages.map((src, i) => (
                     <div key={i} className="flex-none w-64 md:w-72 aspect-square relative group rounded-lg overflow-hidden snap-center cursor-pointer shadow-md">
                         <img 
-                            src={`https://images.unsplash.com/photo-${1580618672591 + i}?q=80&w=600&auto=format&fit=crop`} 
-                            alt="Instagram Post" 
+                            src={src}
+                            alt={`Gallery Strip ${i}`} 
                             className="w-full h-full object-cover"
-                            onError={(e) => {
-                                // Fallback image if specific numbered photo fails
-                                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop";
-                            }}
+                            loading="lazy"
                         />
                         {/* Insta Overlay */}
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
