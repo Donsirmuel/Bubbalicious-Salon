@@ -1,9 +1,11 @@
+
+
 import { ServiceCategory, Stylist, GalleryItem, FaqItem } from './types';
 
 export const BOOKING_URL = "https://bubbalicioushairandco.square.site/s/appointments";
 
-// Local image paths (Absolute path from public root)
-const BLONDE_HERO_IMG = "/images/hero-blonde.jpeg";
+// Local image path
+const BLONDE_HERO_IMG = "/images/hero-blonde.jpg";
 
 export const CONTACT_INFO = {
   address: "Shop 14, 743-757 Deception Bay Rd",
@@ -28,19 +30,19 @@ export const CONTACT_INFO = {
 
 export const HERO_IMAGES = [
   {
-    src: BLONDE_HERO_IMG, 
+    src: BLONDE_HERO_IMG,
     alt: "Blonde Specialist Working",
     heading: "Effortless Colour.",
     subheading: "Rothwell's premier destination for lived-in blonde."
   },
   {
-    src: "/images/hero-extensions.jpeg",
+    src: "/images/hero-extensions.jpg",
     alt: "Long Blonde Hair Extensions",
     heading: "Luxury Extensions.",
     subheading: "Seamless invisible wefts for volume and length."
   },
   {
-    src: "/images/hero-salon.jpeg",
+    src: "/images/hero-salon.jpg",
     alt: "Salon Interior",
     heading: "Relaxed Luxury.",
     subheading: "A welcoming space where you can truly unwind."
@@ -171,7 +173,7 @@ export const TEAM_DATA: Stylist[] = [
     role: "Salon Director",
     specialty: "Blonde & Extension Specialist",
     bio: "The heart of Bubbalicious. Brittany specializes in major transformations and creating that perfect creamy blonde.",
-    image: "/images/team-brittany.jpeg"
+    image: BLONDE_HERO_IMG // Applied specifically here
   },
   {
     id: 'st2',
@@ -179,7 +181,7 @@ export const TEAM_DATA: Stylist[] = [
     role: "Senior Stylist",
     specialty: "Lived-In Colour",
     bio: "Courtney loves creating low-maintenance, sun-kissed looks that grow out seamlessly.",
-    image: "/images/team-courteny.jpeg"
+    image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 'st3',
@@ -187,7 +189,7 @@ export const TEAM_DATA: Stylist[] = [
     role: "Emerging Stylist",
     specialty: "Styling & Foiling",
     bio: "Our rising star, Ash creates the bounciest blow dries and precise foil work.",
-    image: "/images/team-ash.jpeg"
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
@@ -213,14 +215,14 @@ export const REVIEWS_DATA = [
 ];
 
 export const GALLERY_DATA: GalleryItem[] = [
-  { id: 'g1', src: "/images/gallery-blonde.jpeg", category: 'Blonde', caption: 'Creamy Blonde' },
-  { id: 'g2', src: "/images/gallery-balayage.jpeg", category: 'Balayage', caption: 'Root Melt' },
-  { id: 'g3', src: "/images/gallery-extensions.jpeg", category: 'Extensions', caption: '22 Inch Weft' },
-  { id: 'g4', src: "/images/gallery-corrective.jpeg", category: 'Corrective', caption: 'Colour Correction' },
-  { id: 'g5', src: "/images/gallery-faceframe.jpeg", category: 'Blonde', caption: 'Face Frame' },
-  { id: 'g6', src: "/images/gallery-volume.jpeg", category: 'Extensions', caption: 'Volume Booster' },
-  { id: 'g7', src: "/images/gallery-caramel.jpeg", category: 'Balayage', caption: 'Caramel Tones' },
-  { id: 'g8', src: "/images/gallery-banding.jpeg", category: 'Corrective', caption: 'Banding Fix' },
+  { id: 'g1', src: '/images/gallery-blonde.jpg', category: 'Blonde', caption: 'Creamy Blonde' },
+  { id: 'g2', src: '/images/gallery-balayage.jpg', category: 'Balayage', caption: 'Root Melt' },
+  { id: 'g3', src: '/images/gallery-extensions.jpg', category: 'Extensions', caption: '22 Inch Weft' },
+  { id: 'g4', src: '/images/gallery-corrective.jpg', category: 'Corrective', caption: 'Colour Correction' },
+  { id: 'g5', src: '/images/gallery-faceframe.jpg', category: 'Blonde', caption: 'Face Frame' },
+  { id: 'g6', src: '/images/gallery-volume.jpg', category: 'Extensions', caption: 'Volume Booster' },
+  { id: 'g7', src: '/images/gallery-caramel.jpg', category: 'Balayage', caption: 'Caramel Tones' },
+  { id: 'g8', src: '/images/gallery-banding.jpg', category: 'Corrective', caption: 'Banding Fix' },
 ];
 
 export const FAQ_DATA: FaqItem[] = [

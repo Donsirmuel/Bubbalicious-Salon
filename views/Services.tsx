@@ -11,15 +11,16 @@ const Services: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-sand/20 pb-24">
+    <div className="min-h-screen bg-sand pb-24">
       
       {/* Service Hero */}
-      <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden mb-16 bg-charcoal">
+      <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden mb-16">
          <img 
-          src="/images/hero-blonde.jpeg" 
+          src="/images/hero-blonde.jpg" 
           alt="Hair washing service" 
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
+          className="absolute inset-0 w-full h-full object-cover opacity-90"
          />
+         <div className="absolute inset-0 bg-black/40"></div>
          <Reveal animation="fade-in-up" className="relative z-10 text-center text-white px-4">
             <h1 className="font-serif text-4xl md:text-6xl mb-4">Services & Pricing</h1>
             <p className="font-sans text-white/90 max-w-xl mx-auto text-lg font-light">
@@ -33,10 +34,10 @@ const Services: React.FC = () => {
         <div className="space-y-12">
           {SERVICES_DATA.map((category, idx) => (
             <Reveal key={idx} animation="fade-in-up" delay={`delay-${(idx + 1) * 100}`}>
-              <div className={`rounded-xl p-8 shadow-sm border ${
+              <div className={`rounded-2xl p-8 shadow-sm border ${
                   category.title.includes('Package') 
-                    ? 'bg-white border-blush ring-1 ring-blush/20 relative' 
-                    : 'bg-white border-gray-200'
+                    ? 'bg-white border-blush/30 ring-1 ring-blush/20 relative overflow-hidden' 
+                    : 'bg-white border-charcoal/5'
                 }`}>
                 
                 {/* Highlight for Packages */}
@@ -46,8 +47,8 @@ const Services: React.FC = () => {
                     </div>
                 )}
 
-                <div className="flex items-center gap-4 mb-6 pb-4 border-b border-gray-100">
-                   <div className={`w-2 h-8 rounded-full ${category.title.includes('Package') ? 'bg-blush' : 'bg-charcoal'}`}></div>
+                <div className="flex items-center gap-4 mb-6 pb-4 border-b border-sand">
+                   <div className={`w-2 h-8 rounded-full ${category.title.includes('Package') ? 'bg-blush' : 'bg-charcoal/50'}`}></div>
                    <h2 className="font-serif text-2xl text-charcoal">{category.title}</h2>
                 </div>
                 
@@ -56,7 +57,7 @@ const Services: React.FC = () => {
                     <a 
                       key={item.id} 
                       href={BOOKING_URL} 
-                      className="block group hover:bg-gray-50 p-4 rounded-lg transition-colors -mx-4 border border-transparent hover:border-gray-100"
+                      className="block group hover:bg-sand/30 p-4 rounded-lg transition-colors -mx-4 border border-transparent hover:border-sand"
                     >
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
                         <div className="mb-2 sm:mb-0 pr-4">
@@ -69,7 +70,7 @@ const Services: React.FC = () => {
                           )}
                         </div>
                         <div className="flex flex-col items-end flex-shrink-0">
-                          <span className="font-serif text-lg text-charcoal/80 whitespace-nowrap font-medium bg-gray-100 px-3 py-1 rounded-md group-hover:bg-white transition-colors">
+                          <span className="font-serif text-lg text-charcoal/80 whitespace-nowrap font-medium bg-sand/50 px-3 py-1 rounded-md group-hover:bg-white transition-colors">
                               {item.price}
                           </span>
                         </div>
@@ -83,7 +84,8 @@ const Services: React.FC = () => {
         </div>
 
         {/* Booking CTA */}
-        <Reveal animation="zoom-in" className="my-20 text-center bg-charcoal text-white py-12 px-6 rounded-2xl relative overflow-hidden shadow-xl">
+        <Reveal animation="zoom-in" className="my-20 text-center bg-charcoal text-white py-12 px-6 rounded-3xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
           <div className="relative z-10">
              <h3 className="font-serif text-2xl mb-4">Ready for your transformation?</h3>
              <p className="font-sans text-white/70 mb-8 max-w-md mx-auto">
@@ -91,7 +93,7 @@ const Services: React.FC = () => {
              </p>
              <a 
                href={BOOKING_URL} 
-               className="inline-block bg-white text-charcoal px-10 py-4 rounded-full font-medium hover:bg-blush transition-colors shadow-lg"
+               className="inline-block bg-blush text-dark-cta px-10 py-4 rounded-full font-medium hover:bg-white transition-colors shadow-lg"
              >
                Book Online Now
              </a>
@@ -105,7 +107,7 @@ const Services: React.FC = () => {
             </Reveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {POLICIES_DATA.map((policy, idx) => (
-                    <Reveal key={idx} animation="fade-in-up" delay={`delay-${idx * 100}`} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                    <Reveal key={idx} animation="fade-in-up" delay={`delay-${idx * 100}`} className="bg-white p-6 rounded-xl border border-charcoal/5 shadow-sm">
                         <div className="flex items-center gap-3 mb-3 text-blush-dark">
                             <AlertCircle size={20} />
                             <h3 className="font-serif font-bold text-charcoal text-lg">{policy.title}</h3>
@@ -127,7 +129,7 @@ const Services: React.FC = () => {
           <div className="space-y-4">
             {FAQ_DATA.map((faq, index) => (
               <Reveal key={index} animation="fade-in-up" delay={`delay-${index * 100}`}>
-                <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-charcoal/5">
                   <button
                     onClick={() => toggleFaq(index)}
                     className="w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none bg-white hover:bg-gray-50 transition-colors"
@@ -136,7 +138,7 @@ const Services: React.FC = () => {
                     {openFaq === index ? <ChevronUp size={20} className="text-blush-dark" /> : <ChevronDown size={20} className="text-gray-400" />}
                   </button>
                   <div 
-                    className={`px-6 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50 ${
+                    className={`px-6 overflow-hidden transition-all duration-300 ease-in-out bg-sand/20 ${
                       openFaq === index ? 'max-h-48 py-6 opacity-100' : 'max-h-0 opacity-0'
                     }`}
                   >

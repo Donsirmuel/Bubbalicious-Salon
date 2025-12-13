@@ -12,13 +12,24 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   return (
-    <div className="flex flex-col w-full overflow-hidden bg-white">
+    <div className="flex flex-col w-full overflow-hidden">
       
       {/* HERO SECTION WITH CAROUSEL */}
       <HeroCarousel onNavigate={onNavigate} />
 
       {/* WHY BUBBALICIOUS - VISUAL CARDS */}
       <section className="py-24 px-6 max-w-7xl mx-auto relative">
+        {/* Background Texture with Overlay */}
+        <div className="absolute inset-0 -z-10">
+            <img 
+              src="/images/texture-bg.jpg" 
+              alt="Texture Background" 
+              loading="lazy"
+              className="w-full h-full object-cover opacity-5 grayscale" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-sand via-sand/95 to-sand"></div>
+        </div>
+
         <Reveal animation="fade-in-up">
           <div className="text-center mb-16 relative z-10">
             <h2 className="font-serif text-3xl md:text-5xl text-charcoal mb-4">The Bubbalicious Experience</h2>
@@ -136,7 +147,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     loading="lazy" 
                   />
                   {/* Floating Card */}
-                  <div className="absolute bottom-10 -right-4 md:-right-10 bg-white p-6 rounded-xl shadow-2xl max-w-[240px] hidden md:block animate-fade-in-up delay-500 border border-gray-100">
+                  <div className="absolute bottom-10 -right-4 md:-right-10 bg-white p-6 rounded-xl shadow-xl max-w-[240px] hidden md:block animate-fade-in-up delay-500 border border-sand">
                     <div className="flex items-center space-x-2 mb-2">
                        <Star className="text-amber-400 w-4 h-4" fill="currentColor" />
                        <Star className="text-amber-400 w-4 h-4" fill="currentColor" />
@@ -147,6 +158,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <p className="font-serif italic text-charcoal text-sm">"The only place I trust with my blonde. Absolutely stunning results every time."</p>
                   </div>
                </div>
+               {/* Decorative Circle */}
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[90%] bg-blush/10 rounded-full blur-3xl -z-0"></div>
             </Reveal>
 
             {/* Text Content */}

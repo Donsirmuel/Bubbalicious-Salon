@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { GALLERY_DATA } from '../constants';
 import { Instagram, ArrowRight } from 'lucide-react';
@@ -11,20 +12,20 @@ const Gallery: React.FC = () => {
     ? GALLERY_DATA 
     : GALLERY_DATA.filter(img => img.category === filter);
 
-  // Use local images for strip
+  // Local image strip
   const galleryStripImages = [
-    "/images/insta-1.jpeg",
-    "/images/insta-2.jpeg",
-    "/images/insta-3.jpeg",
-    "/images/insta-4.jpeg",
-    "/images/insta-5.jpeg",
-    "/images/insta-6.jpeg",
-    "/images/insta-7.jpeg",
-    "/images/insta-8.jpeg",
+    "/images/insta-1.jpg",
+    "/images/insta-2.jpg",
+    "/images/insta-3.jpg",
+    "/images/insta-4.jpg",
+    "/images/insta-5.jpg",
+    "/images/insta-6.jpg",
+    "/images/insta-7.jpg",
+    "/images/insta-8.jpg",
   ];
 
   return (
-    <div className="min-h-screen bg-sand/20 pt-10 pb-0">
+    <div className="min-h-screen bg-sand pt-10 pb-0">
       <div className="max-w-7xl mx-auto px-6 mb-24">
         
         <Reveal animation="fade-in-down" className="text-center mb-12">
@@ -42,7 +43,7 @@ const Gallery: React.FC = () => {
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
                 filter === f 
                   ? 'bg-charcoal text-white shadow-md transform scale-105' 
-                  : 'bg-white text-charcoal hover:bg-gray-50 border border-gray-200'
+                  : 'bg-white text-charcoal hover:bg-white/60 border border-transparent hover:border-charcoal/10'
               }`}
             >
               {f}
@@ -54,7 +55,7 @@ const Gallery: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {filteredImages.map((img, idx) => (
             <Reveal key={img.id} animation="fade-in-up" delay={`delay-${(idx % 4) * 100}`}>
-              <div className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-gray-200 cursor-pointer shadow-md">
+              <div className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-gray-200 cursor-pointer shadow-sm">
                 <img 
                   src={img.src} 
                   alt={img.caption}
@@ -79,7 +80,7 @@ const Gallery: React.FC = () => {
       </div>
 
       {/* Instagram Feed Section */}
-      <Reveal animation="fade-in-up" className="bg-white py-16 border-t border-gray-100">
+      <Reveal animation="fade-in-up" className="bg-white py-16 border-t border-sand">
         <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-end mb-8">
                 <div>
