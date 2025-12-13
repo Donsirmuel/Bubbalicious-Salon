@@ -179,7 +179,7 @@ export const TEAM_DATA: Stylist[] = [
     role: "Senior Stylist",
     specialty: "Lived-In Colour",
     bio: "Courtney loves creating low-maintenance, sun-kissed looks that grow out seamlessly.",
-    image: "/images/team-courtney.jpeg"
+    image: "/images/team-courteny.jpeg"
   },
   {
     id: 'st3',
