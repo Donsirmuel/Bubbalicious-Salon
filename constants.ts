@@ -2,7 +2,7 @@ import { ServiceCategory, Stylist, GalleryItem, FaqItem } from './types';
 
 export const BOOKING_URL = "https://bubbalicioushairandco.square.site/s/appointments";
 
-// Local image paths (Relative to public folder)
+// Local image paths (Absolute path from public root)
 const BLONDE_HERO_IMG = "/images/hero-blonde.jpeg";
 
 export const CONTACT_INFO = {
