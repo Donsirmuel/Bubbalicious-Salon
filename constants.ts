@@ -1,11 +1,9 @@
-
-
 import { ServiceCategory, Stylist, GalleryItem, FaqItem } from './types';
 
 export const BOOKING_URL = "https://bubbalicioushairandco.square.site/s/appointments";
 
-// The specific "Long Blonde" image requested
-const BLONDE_HERO_IMG = "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1920&auto=format&fit=crop";
+// Local image paths (Relative to public folder)
+const BLONDE_HERO_IMG = "images/hero-blonde.jpeg";
 
 export const CONTACT_INFO = {
   address: "Shop 14, 743-757 Deception Bay Rd",
@@ -30,19 +28,19 @@ export const CONTACT_INFO = {
 
 export const HERO_IMAGES = [
   {
-    src: BLONDE_HERO_IMG, // Applied specifically here
+    src: BLONDE_HERO_IMG, 
     alt: "Blonde Specialist Working",
     heading: "Effortless Colour.",
     subheading: "Rothwell's premier destination for lived-in blonde."
   },
   {
-    src: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1920&auto=format&fit=crop",
+    src: "images/hero-extensions.jpeg",
     alt: "Long Blonde Hair Extensions",
     heading: "Luxury Extensions.",
     subheading: "Seamless invisible wefts for volume and length."
   },
   {
-    src: "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=1920&auto=format&fit=crop",
+    src: "images/hero-salon.jpeg",
     alt: "Salon Interior",
     heading: "Relaxed Luxury.",
     subheading: "A welcoming space where you can truly unwind."
@@ -173,7 +171,7 @@ export const TEAM_DATA: Stylist[] = [
     role: "Salon Director",
     specialty: "Blonde & Extension Specialist",
     bio: "The heart of Bubbalicious. Brittany specializes in major transformations and creating that perfect creamy blonde.",
-    image: BLONDE_HERO_IMG // Applied specifically here
+    image: "images/team-brittany.jpeg"
   },
   {
     id: 'st2',
@@ -181,7 +179,7 @@ export const TEAM_DATA: Stylist[] = [
     role: "Senior Stylist",
     specialty: "Lived-In Colour",
     bio: "Courtney loves creating low-maintenance, sun-kissed looks that grow out seamlessly.",
-    image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=800&auto=format&fit=crop"
+    image: "images/team-courtney.jpeg"
   },
   {
     id: 'st3',
@@ -189,7 +187,7 @@ export const TEAM_DATA: Stylist[] = [
     role: "Emerging Stylist",
     specialty: "Styling & Foiling",
     bio: "Our rising star, Ash creates the bounciest blow dries and precise foil work.",
-    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop"
+    image: "images/team-ash.jpeg"
   }
 ];
 
@@ -215,14 +213,14 @@ export const REVIEWS_DATA = [
 ];
 
 export const GALLERY_DATA: GalleryItem[] = [
-  { id: 'g1', src: BLONDE_HERO_IMG, category: 'Blonde', caption: 'Creamy Blonde' }, // Applied specifically here
-  { id: 'g2', src: 'https://images.unsplash.com/photo-1595476103518-3c8ad029e4a8?q=80&w=800&auto=format&fit=crop', category: 'Balayage', caption: 'Root Melt' },
-  { id: 'g3', src: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop', category: 'Extensions', caption: '22 Inch Weft' },
-  { id: 'g4', src: 'https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=800&auto=format&fit=crop', category: 'Corrective', caption: 'Colour Correction' },
-  { id: 'g5', src: BLONDE_HERO_IMG, category: 'Blonde', caption: 'Face Frame' }, // Applied specifically here
-  { id: 'g6', src: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop', category: 'Extensions', caption: 'Volume Booster' },
-  { id: 'g7', src: 'https://images.unsplash.com/photo-1596455607563-ad6193f76b17?q=80&w=800&auto=format&fit=crop', category: 'Balayage', caption: 'Caramel Tones' },
-  { id: 'g8', src: 'https://images.unsplash.com/photo-1582095133179-bfd08d2fc6a8?q=80&w=800&auto=format&fit=crop', category: 'Corrective', caption: 'Banding Fix' },
+  { id: 'g1', src: "images/gallery-blonde.jpeg", category: 'Blonde', caption: 'Creamy Blonde' },
+  { id: 'g2', src: "images/gallery-balayage.jpeg", category: 'Balayage', caption: 'Root Melt' },
+  { id: 'g3', src: "images/gallery-extensions.jpeg", category: 'Extensions', caption: '22 Inch Weft' },
+  { id: 'g4', src: "images/gallery-corrective.jpeg", category: 'Corrective', caption: 'Colour Correction' },
+  { id: 'g5', src: "images/gallery-faceframe.jpeg", category: 'Blonde', caption: 'Face Frame' },
+  { id: 'g6', src: "images/gallery-volume.jpeg", category: 'Extensions', caption: 'Volume Booster' },
+  { id: 'g7', src: "images/gallery-caramel.jpeg", category: 'Balayage', caption: 'Caramel Tones' },
+  { id: 'g8', src: "images/gallery-banding.jpeg", category: 'Corrective', caption: 'Banding Fix' },
 ];
 
 export const FAQ_DATA: FaqItem[] = [

@@ -1,24 +1,23 @@
-
 import React from 'react';
 import { Instagram, ArrowRight, Heart } from 'lucide-react';
 import Reveal from './Reveal';
 import { CONTACT_INFO } from '../constants';
 
 const InstagramFeed: React.FC = () => {
-    // Curated list of high-reliability images for the feed
+    // Local images for feed
     const feedImages = [
-        "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop", // The requested Blonde Image
-        "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=600&auto=format&fit=crop", // Vivid Pink
-        "https://images.unsplash.com/photo-1595476103518-3c8ad029e4a8?q=80&w=600&auto=format&fit=crop", // Redhead/Face Frame
-        "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop", // Salon interior
-        "https://images.unsplash.com/photo-1582095133179-bfd08d2fc6a8?q=80&w=600&auto=format&fit=crop", // Tools
-        "https://images.unsplash.com/photo-1492106087820-71f171780e99?q=80&w=600&auto=format&fit=crop", // Brunette/Balayage
-        "https://images.unsplash.com/photo-1596455607563-ad6193f76b17?q=80&w=600&auto=format&fit=crop", // Foiling process
-        "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop", // Stylist close up
+        "images/insta-1.jpeg",
+        "images/insta-2.jpeg",
+        "images/insta-3.jpeg",
+        "images/insta-4.jpeg",
+        "images/insta-5.jpeg",
+        "images/insta-6.jpeg",
+        "images/insta-7.jpeg",
+        "images/insta-8.jpeg",
     ];
 
     return (
-        <Reveal animation="fade-in-up" className="bg-white py-20 border-t border-sand">
+        <Reveal animation="fade-in-up" className="bg-white py-20 border-t border-gray-100">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-10">
                     <div>
@@ -42,12 +41,13 @@ const InstagramFeed: React.FC = () => {
                             href={CONTACT_INFO.socials.instagram} 
                             target="_blank" 
                             rel="noreferrer"
-                            className="block aspect-square relative group overflow-hidden bg-sand/20 cursor-pointer"
+                            className="block aspect-square relative group overflow-hidden bg-gray-100 cursor-pointer"
                         >
                             <img 
                                 src={src} 
                                 alt={`Instagram Post ${i + 1}`} 
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                loading="lazy"
                             />
                             {/* Overlay */}
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white gap-4">

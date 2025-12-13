@@ -26,7 +26,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate }) => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-sand/95 backdrop-blur-sm border-b border-charcoal/5">
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
@@ -36,7 +36,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate }) => {
             onClick={() => handleNav('HOME')}
           >
             <h1 className="font-serif text-2xl font-bold tracking-tighter text-charcoal">
-              Bubbalicious <span className="font-sans text-sm font-normal tracking-wide block sm:inline">Hair & Co</span>
+              Bubbalicious <span className="font-sans text-sm font-normal tracking-wide block sm:inline text-gray-500">Hair & Co</span>
             </h1>
           </div>
 
@@ -47,7 +47,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate }) => {
                 key={link.view}
                 onClick={() => handleNav(link.view)}
                 className={`font-sans text-sm tracking-wide uppercase transition-colors ${
-                  currentView === link.view ? 'text-charcoal font-semibold border-b-2 border-blush' : 'text-charcoal/70 hover:text-charcoal'
+                  currentView === link.view ? 'text-charcoal font-bold border-b-2 border-blush' : 'text-gray-500 hover:text-charcoal'
                 }`}
               >
                 {link.label}
@@ -55,7 +55,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate }) => {
             ))}
             <a 
               href={BOOKING_URL} 
-              className="bg-blush hover:bg-blush-dark text-dark-cta font-sans font-medium px-6 py-2.5 rounded-full transition-colors"
+              className="bg-charcoal hover:bg-black text-white font-sans font-medium px-6 py-2.5 rounded-full transition-colors shadow-md"
             >
               Book Now
             </a>
@@ -75,12 +75,12 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate }) => {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="md:hidden absolute top-20 left-0 w-full bg-sand border-b border-charcoal/10 shadow-xl flex flex-col p-6 animate-fade-in-down">
+        <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-xl flex flex-col p-6 animate-fade-in-down">
           {navLinks.map((link) => (
             <button
               key={link.view}
               onClick={() => handleNav(link.view)}
-              className="text-left font-serif text-xl py-4 border-b border-charcoal/10 text-charcoal"
+              className="text-left font-serif text-xl py-4 border-b border-gray-100 text-charcoal"
             >
               {link.label}
             </button>
@@ -91,7 +91,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate }) => {
             </a>
             <a 
               href={BOOKING_URL} 
-              className="bg-blush text-dark-cta font-sans font-medium px-8 py-3 rounded-full flex-grow text-center ml-4"
+              className="bg-charcoal text-white font-sans font-medium px-8 py-3 rounded-full flex-grow text-center ml-4"
             >
               Book Now
             </a>

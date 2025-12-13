@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
         {/* Left Side - Image (Desktop) */}
         <div className="lg:w-1/2 lg:h-screen lg:sticky lg:top-0 hidden lg:block overflow-hidden relative">
            <img 
-            src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=1200&auto=format&fit=crop" 
+            src="images/hero-salon.jpeg" 
             className="w-full h-full object-cover" 
             alt="Bubbalicious Salon Entrance" 
            />

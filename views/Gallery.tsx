@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { GALLERY_DATA } from '../constants';
 import { Instagram, ArrowRight } from 'lucide-react';
@@ -12,20 +11,20 @@ const Gallery: React.FC = () => {
     ? GALLERY_DATA 
     : GALLERY_DATA.filter(img => img.category === filter);
 
-  // Curated list of distinct images for the bottom "Instagram Strip" to avoid repetition and broken links
+  // Use local images for strip
   const galleryStripImages = [
-    "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=400&auto=format&fit=crop", // Extensions/Wefts
-    "https://images.unsplash.com/photo-1521590832896-40226c61ebac?q=80&w=400&auto=format&fit=crop", // Salon Texture
-    "https://images.unsplash.com/photo-1582095133179-bfd08d2fc6a8?q=80&w=400&auto=format&fit=crop", // Tools/Scissors
-    "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=400&auto=format&fit=crop", // Product/Shelf
-    "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=400&auto=format&fit=crop", // Vivid/Pink
-    "https://images.unsplash.com/photo-1556228720-1987594b8d73?q=80&w=400&auto=format&fit=crop", // Styling tools
-    "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=400&auto=format&fit=crop", // Salon Chair
-    "https://images.unsplash.com/photo-1503951914875-452162b7f304?q=80&w=400&auto=format&fit=crop", // Comb/Scissor artistic
+    "images/insta-1.jpeg",
+    "images/insta-2.jpeg",
+    "images/insta-3.jpeg",
+    "images/insta-4.jpeg",
+    "images/insta-5.jpeg",
+    "images/insta-6.jpeg",
+    "images/insta-7.jpeg",
+    "images/insta-8.jpeg",
   ];
 
   return (
-    <div className="min-h-screen bg-sand pt-10 pb-0">
+    <div className="min-h-screen bg-sand/20 pt-10 pb-0">
       <div className="max-w-7xl mx-auto px-6 mb-24">
         
         <Reveal animation="fade-in-down" className="text-center mb-12">
@@ -43,7 +42,7 @@ const Gallery: React.FC = () => {
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
                 filter === f 
                   ? 'bg-charcoal text-white shadow-md transform scale-105' 
-                  : 'bg-white text-charcoal hover:bg-white/60 border border-transparent hover:border-charcoal/10'
+                  : 'bg-white text-charcoal hover:bg-gray-50 border border-gray-200'
               }`}
             >
               {f}
@@ -55,7 +54,7 @@ const Gallery: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {filteredImages.map((img, idx) => (
             <Reveal key={img.id} animation="fade-in-up" delay={`delay-${(idx % 4) * 100}`}>
-              <div className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-gray-200 cursor-pointer shadow-sm">
+              <div className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-gray-200 cursor-pointer shadow-md">
                 <img 
                   src={img.src} 
                   alt={img.caption}
@@ -80,7 +79,7 @@ const Gallery: React.FC = () => {
       </div>
 
       {/* Instagram Feed Section */}
-      <Reveal animation="fade-in-up" className="bg-white py-16 border-t border-sand">
+      <Reveal animation="fade-in-up" className="bg-white py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-end mb-8">
                 <div>
