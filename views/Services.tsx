@@ -16,7 +16,7 @@ const Services: React.FC = () => {
       {/* Service Hero */}
       <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden mb-16 bg-charcoal">
          <img 
-          src="images/hero-blonde.jpeg" 
+          src="/images/hero-blonde.jpeg" 
           alt="Hair washing service" 
           className="absolute inset-0 w-full h-full object-cover opacity-60"
          />

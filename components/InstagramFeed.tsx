@@ -6,14 +6,14 @@ import { CONTACT_INFO } from '../constants';
 const InstagramFeed: React.FC = () => {
     // Local images for feed
     const feedImages = [
-        "images/insta-1.jpeg",
-        "images/insta-2.jpeg",
-        "images/insta-3.jpeg",
-        "images/insta-4.jpeg",
-        "images/insta-5.jpeg",
-        "images/insta-6.jpeg",
-        "images/insta-7.jpeg",
-        "images/insta-8.jpeg",
+        "/images/insta-1.jpeg",
+        "/images/insta-2.jpeg",
+        "/images/insta-3.jpeg",
+        "/images/insta-4.jpeg",
+        "/images/insta-5.jpeg",
+        "/images/insta-6.jpeg",
+        "/images/insta-7.jpeg",
+        "/images/insta-8.jpeg",
     ];
 
     return (

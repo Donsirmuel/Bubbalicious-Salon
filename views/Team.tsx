@@ -37,7 +37,7 @@ const Team: React.FC = () => {
                 </div>
                 <div className="relative">
                     <img 
-                        src="images/hero-extensions.jpeg" 
+                        src="/images/hero-extensions.jpeg" 
                         alt="Salon Interior" 
                         className="rounded-2xl shadow-xl w-full object-cover h-80 lg:h-96"
                     />
@@ -120,7 +120,7 @@ const Team: React.FC = () => {
             </div>
             <div className="w-full md:w-1/2 h-64 md:h-80 bg-gray-600 rounded-xl overflow-hidden relative border border-white/10 group">
                 <img 
-                    src="images/hero-salon.jpeg" 
+                    src="/images/hero-salon.jpeg" 
                     alt="Map Location" 
                     className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 scale-110"
                 />

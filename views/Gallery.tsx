@@ -13,14 +13,14 @@ const Gallery: React.FC = () => {
 
   // Use local images for strip
   const galleryStripImages = [
-    "images/insta-1.jpeg",
-    "images/insta-2.jpeg",
-    "images/insta-3.jpeg",
-    "images/insta-4.jpeg",
-    "images/insta-5.jpeg",
-    "images/insta-6.jpeg",
-    "images/insta-7.jpeg",
-    "images/insta-8.jpeg",
+    "/images/insta-1.jpeg",
+    "/images/insta-2.jpeg",
+    "/images/insta-3.jpeg",
+    "/images/insta-4.jpeg",
+    "/images/insta-5.jpeg",
+    "/images/insta-6.jpeg",
+    "/images/insta-7.jpeg",
+    "/images/insta-8.jpeg",
   ];
 
   return (
