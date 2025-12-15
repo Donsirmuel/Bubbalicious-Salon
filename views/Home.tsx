@@ -21,15 +21,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate, onBookingClick }) => {
       {/* WHY BUBBALICIOUS - VISUAL CARDS */}
       <section className="py-24 px-6 max-w-7xl mx-auto relative">
         {/* Background Texture with Overlay */}
-        <div className="absolute inset-0 -z-10">
-            <img 
-              src="/images/texture-bg.jpg" 
-              alt="Texture Background" 
-              loading="lazy"
-              className="w-full h-full object-cover opacity-5 grayscale" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-sand via-sand/95 to-sand"></div>
-        </div>
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-sand via-sand/95 to-sand" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(44, 42, 42, 0.03) 1px, transparent 0)`,
+          backgroundSize: '24px 24px'
+        }}></div>
 
         <Reveal animation="fade-in-up">
           <div className="text-center mb-16 relative z-10">
