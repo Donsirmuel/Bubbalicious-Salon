@@ -11,7 +11,7 @@ export const CONTACT_INFO = {
   address: "Shop 14, 743-757 Deception Bay Rd",
   city: "Rothwell, QLD 4022",
   phone: "0422 173 177",
-  email: "bubbalicioushairandco@gmail.com",
+  email: "bubbbalicioushairandco@gmail.com",
   mapLink: "https://maps.app.goo.gl/QHit7pfX6LS9iNHm9",
   socials: {
     instagram: "https://www.instagram.com/bubbalicioushairandco/",

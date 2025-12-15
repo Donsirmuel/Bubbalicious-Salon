@@ -5,6 +5,7 @@ import { ViewState } from '../types';
 
 interface FooterProps {
     onNavigate: (view: ViewState) => void;
+    onBookingClick: () => void;
 }
 
 // Custom TikTok Icon since it might be missing in older Lucide versions
@@ -25,7 +26,7 @@ const TikTokIcon = ({ size = 18, className = "" }: { size?: number, className?: 
   </svg>
 );
 
-const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+const Footer: React.FC<FooterProps> = ({ onNavigate, onBookingClick }) => {
   return (
     <footer className="bg-charcoal text-sand pt-16 pb-24 md:pb-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -61,7 +62,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li><button onClick={() => onNavigate('SERVICES')} className="hover:text-white transition-colors text-left">Services & Pricing</button></li>
               <li><button onClick={() => onNavigate('GALLERY')} className="hover:text-white transition-colors text-left">Gallery</button></li>
               <li><button onClick={() => onNavigate('TEAM')} className="hover:text-white transition-colors text-left">Meet the Team</button></li>
-              <li><a href={BOOKING_URL} className="hover:text-white transition-colors">Book Online</a></li>
+              <li><button onClick={onBookingClick} className="hover:text-white transition-colors text-left">Book Online</button></li>
             </ul>
           </div>
 

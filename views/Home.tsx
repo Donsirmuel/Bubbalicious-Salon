@@ -8,14 +8,15 @@ import InstagramFeed from '../components/InstagramFeed';
 
 interface HomeProps {
   onNavigate: (view: ViewState) => void;
+  onBookingClick: () => void;
 }
 
-const Home: React.FC<HomeProps> = ({ onNavigate }) => {
+const Home: React.FC<HomeProps> = ({ onNavigate, onBookingClick }) => {
   return (
     <div className="flex flex-col w-full overflow-hidden">
       
       {/* HERO SECTION WITH CAROUSEL */}
-      <HeroCarousel onNavigate={onNavigate} />
+      <HeroCarousel onNavigate={onNavigate} onBookingClick={onBookingClick} />
 
       {/* WHY BUBBALICIOUS - VISUAL CARDS */}
       <section className="py-24 px-6 max-w-7xl mx-auto relative">
@@ -217,12 +218,12 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               <p className="text-charcoal/70 text-lg mb-10 font-sans font-light">
                 Bookings fill up fast. Secure your spot today via our secure online booking system.
               </p>
-              <a 
-                href={BOOKING_URL} 
+              <button 
+                onClick={onBookingClick}
                 className="inline-block bg-charcoal text-white font-sans font-semibold px-12 py-4 rounded-full hover:bg-blush hover:text-charcoal transition-all transform hover:scale-105 duration-300 shadow-xl"
               >
                 Book Online Now
-              </a>
+              </button>
             </Reveal>
          </div>
       </section>

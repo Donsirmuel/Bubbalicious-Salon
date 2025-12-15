@@ -3,7 +3,11 @@ import { TEAM_DATA, BOOKING_URL, CONTACT_INFO } from '../constants';
 import { MapPin, Info, Heart, Quote } from 'lucide-react';
 import Reveal from '../components/Reveal';
 
-const Team: React.FC = () => {
+interface TeamProps {
+  onBookingClick: () => void;
+}
+
+const Team: React.FC<TeamProps> = ({ onBookingClick }) => {
   return (
     <div className="min-h-screen bg-sand pt-10 pb-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -81,12 +85,12 @@ const Team: React.FC = () => {
                             {member.bio}
                             </p>
                         </div>
-                        <a 
-                        href={BOOKING_URL} 
+                        <button 
+                        onClick={onBookingClick}
                         className="block w-full text-center bg-transparent border border-charcoal text-charcoal hover:bg-charcoal hover:text-white py-3 rounded-lg transition-all font-medium text-sm"
                         >
                         Book with {member.name}
-                        </a>
+                        </button>
                     </div>
                   </div>
                 </Reveal>

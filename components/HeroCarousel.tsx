@@ -5,9 +5,10 @@ import { BOOKING_URL } from '../constants';
 
 interface HeroCarouselProps {
     onNavigate: (view: any) => void;
+    onBookingClick: () => void;
 }
 
-const HeroCarousel: React.FC<HeroCarouselProps> = ({ onNavigate }) => {
+const HeroCarousel: React.FC<HeroCarouselProps> = ({ onNavigate, onBookingClick }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -64,12 +65,12 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ onNavigate }) => {
         <div className="mt-8 md:mt-0">
              <Reveal animation="fade-in-up" delay="delay-500">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a 
-                    href={BOOKING_URL}
+                <button 
+                    onClick={onBookingClick}
                     className="w-full sm:w-auto px-10 py-4 bg-blush hover:bg-white text-dark-cta rounded-full font-sans font-semibold tracking-wide transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
                 >
                     Book Online
-                </a>
+                </button>
                 <button 
                     onClick={() => onNavigate('GALLERY')}
                     className="w-full sm:w-auto px-10 py-4 bg-transparent border border-white text-white hover:bg-white hover:text-charcoal rounded-full font-sans font-medium transition-all duration-300"

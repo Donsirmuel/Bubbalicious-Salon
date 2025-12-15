@@ -6,9 +6,10 @@ import { BOOKING_URL } from '../constants';
 interface NavigationProps {
   currentView: ViewState;
   onNavigate: (view: ViewState) => void;
+  onBookingClick: () => void;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate }) => {
+const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate, onBookingClick }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks: { label: string; view: ViewState }[] = [
@@ -53,12 +54,12 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate }) => {
                 {link.label}
               </button>
             ))}
-            <a 
-              href={BOOKING_URL} 
+            <button 
+              onClick={onBookingClick}
               className="bg-blush hover:bg-blush-dark text-dark-cta font-sans font-medium px-6 py-2.5 rounded-full transition-colors"
             >
               Book Now
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,12 +90,12 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate }) => {
             <a href="https://instagram.com" className="text-charcoal p-2">
               <Instagram size={24} />
             </a>
-            <a 
-              href={BOOKING_URL} 
+            <button 
+              onClick={onBookingClick}
               className="bg-blush text-dark-cta font-sans font-medium px-8 py-3 rounded-full flex-grow text-center ml-4"
             >
               Book Now
-            </a>
+            </button>
           </div>
         </div>
       )}

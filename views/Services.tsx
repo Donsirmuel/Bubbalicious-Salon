@@ -3,7 +3,11 @@ import { SERVICES_DATA, FAQ_DATA, POLICIES_DATA, BOOKING_URL } from '../constant
 import { ChevronDown, ChevronUp, AlertCircle, ArrowRight } from 'lucide-react';
 import Reveal from '../components/Reveal';
 
-const Services: React.FC = () => {
+interface ServicesProps {
+  onBookingClick: () => void;
+}
+
+const Services: React.FC<ServicesProps> = ({ onBookingClick }) => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -54,10 +58,10 @@ const Services: React.FC = () => {
                 
                 <div className="space-y-4">
                   {category.items.map((item) => (
-                    <a 
+                    <button 
                       key={item.id} 
-                      href={BOOKING_URL} 
-                      className="block group hover:bg-sand/30 p-4 rounded-lg transition-colors -mx-4 border border-transparent hover:border-sand"
+                      onClick={onBookingClick}
+                      className="block group hover:bg-sand/30 p-4 rounded-lg transition-colors -mx-4 border border-transparent hover:border-sand w-full text-left"
                     >
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
                         <div className="mb-2 sm:mb-0 pr-4">
@@ -75,7 +79,7 @@ const Services: React.FC = () => {
                           </span>
                         </div>
                       </div>
-                    </a>
+                    </button>
                   ))}
                 </div>
               </div>
@@ -91,12 +95,12 @@ const Services: React.FC = () => {
              <p className="font-sans text-white/70 mb-8 max-w-md mx-auto">
                We use Square Bookings for seamless scheduling. No account creation required.
              </p>
-             <a 
-               href={BOOKING_URL} 
+             <button 
+               onClick={onBookingClick}
                className="inline-block bg-blush text-dark-cta px-10 py-4 rounded-full font-medium hover:bg-white transition-colors shadow-lg"
              >
                Book Online Now
-             </a>
+             </button>
           </div>
         </Reveal>
 
