@@ -1,23 +1,18 @@
 import React from 'react';
+import '../styles/banner.css';
 
 const DemoWatermark: React.FC = () => {
-  // Create a tiled SVG background pattern
-  const svgString = `
-    <svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'>
-      <text x='50%' y='50%' font-family='sans-serif' font-weight='900' font-size='32' fill='%23000' text-anchor='middle' transform='rotate(-45 200 200)' opacity='0.08'>
-        DEMO PREVIEW
-      </text>
-    </svg>
-  `.trim();
-
-  const bgImage = `url("data:image/svg+xml;utf8,${encodeURIComponent(svgString)}")`;
-
   return (
     <div 
-      className="fixed inset-0 z-[9999] pointer-events-none select-none"
-      style={{ backgroundImage: bgImage }}
-      aria-hidden="true"
-    />
+      className="w-full bg-red-600 text-white py-3 px-4 font-bold text-sm md:text-base tracking-widest fixed top-0 left-0 right-0 z-[9999] shadow-lg overflow-hidden"
+      role="banner"
+      aria-label="Developer preview notification"
+    >
+      <div className="banner-scroll">
+        <span className="banner-text">🔴 DEVELOPER'S PREVIEW - CONTACT DEVELOPER FOR DETAILS!</span>
+        <span className="banner-text">🔴 DEVELOPER'S PREVIEW - CONTACT DEVELOPER FOR DETAILS!</span>
+      </div>
+    </div>
   );
 };
 

@@ -27,7 +27,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate, onBook
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-sand/95 backdrop-blur-sm border-b border-charcoal/5">
+    <nav className="sticky top-[45px] z-50 bg-sand/95 backdrop-blur-sm border-b border-charcoal/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
