@@ -9,8 +9,26 @@ const DemoWatermark: React.FC = () => {
       aria-label="Developer preview notification"
     >
       <div className="banner-scroll">
-        <span className="banner-text">🔴 DEVELOPER'S PREVIEW - CONTACT DEVELOPER FOR DETAILS!</span>
-        <span className="banner-text">🔴 DEVELOPER'S PREVIEW - CONTACT DEVELOPER FOR DETAILS!</span>
+        <span className="banner-text">
+          🔴 DEVELOPER'S PREVIEW - <a 
+            href="https://donlabs.vercel.app" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="underline hover:text-yellow-300 transition-colors duration-200"
+          >
+            CONTACT DEVELOPER FOR DETAILS
+          </a>!
+        </span>
+        <span className="banner-text">
+          🔴 DEVELOPER'S PREVIEW - <a 
+            href="https://donlabs.vercel.app" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="underline hover:text-yellow-300 transition-colors duration-200"
+          >
+            CONTACT DEVELOPER FOR DETAILS
+          </a>!
+        </span>
       </div>
     </div>
   );
