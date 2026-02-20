@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Bubbalicious Hair & Co Website
 
-# Run and deploy your AI Studio app
+Salon website built with React, TypeScript, and Vite.
 
-This contains everything you need to run your app locally.
+## Quick Start
 
-View your app in AI Studio: https://ai.studio/apps/drive/1h0zRMcUbYiRhOx_gHa-8D-QWt5bldwb_
+```bash
+npm install
+npm run dev
+```
 
-## Run Locally
+Open `http://localhost:3000`.
 
-**Prerequisites:**  Node.js
+## Scripts
 
+- `npm run dev` - start dev server
+- `npm run build` - build for production
+- `npm run preview` - preview production build
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Main Files
+
+- `App.tsx` - app shell and view routing
+- `constants.ts` - salon content (services, team, gallery, contact)
+- `components/` - reusable UI components
+- `views/` - page views
+
+## Deploy
+
+```bash
+npm run build
+```
+
+This project is frontend-only (no backend service in this repo).
+Running `npm run build` generates the `dist/` folder, which you then deploy to your hosting provider.
