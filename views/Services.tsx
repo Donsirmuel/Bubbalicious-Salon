@@ -92,11 +92,15 @@ const Services: React.FC<ServicesProps> = ({ onBookingClick }) => {
          />
         <div className="absolute inset-0 bg-black/28"></div>
         <Reveal animation="fade-in-up" className="relative z-10 text-center text-white px-4">
-            <h1 className="font-serif text-4xl md:text-6xl mb-4">Services & Pricing</h1>
-            <p className="font-sans text-white/90 max-w-xl mx-auto text-lg font-light">
+          <div className="mx-auto max-w-2xl rounded-3xl bg-black/35 px-6 py-6 sm:px-8 sm:py-8 shadow-2xl">
+            <h1 className="font-serif text-4xl md:text-6xl mb-4 text-white" style={{ textShadow: '0 12px 28px rgba(143, 140, 140, 0.75)' }}>
+              Services & Pricing
+            </h1>
+            <p className="font-sans text-white/95 max-w-xl mx-auto text-base sm:text-lg font-light leading-relaxed" style={{ textShadow: '0 8px 18px rgba(0, 0, 0, 0.65)' }}>
               Transparent pricing for exceptional results. Click any service to book via Square.
             </p>
-         </Reveal>
+          </div>
+        </Reveal>
       </div>
 
       <div className="max-w-6xl mx-auto px-6">
